@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto Slab', serif;
+    scroll-behavior: smooth;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+.container {
+    max-width: 90%;
+    margin: auto;
+    order: 1;
+}
+
+
+.head_container {
+    max-width: 90%;
+    margin: auto;
+}
+
+
+header {
+    height: 14vh;
+    background-color: white;
+    z-index:1000
+}
+
+.logo img {
+    width: 140px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+}
+
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: black;
+
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header ul li {
+    margin-left: 3rem;
+    list-style-type:disc;
+}
+
+header ul li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: black;
+    transition: 0.5s;
+}
+
+header ul li a:hover {
+    color: #C1B086;
+}
+
+#navigation-menu    {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+@media only screen and (max-width: 768px) {
+    header ul {
+        display: block;
+        position: fixed;
+        left: -100%;
+        top: 7rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.5s;
+        box-shadow: 0 10px 27px #000;
+        z-index: 20;
+    }
+
+
+    header ul.active {
+        left: 0%;
+    }
+
+    header ul li {
+        margin: 2.5rem 0;
+    }
+
+    header ul li a {
+        color: black;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+
+    }
+
+}
+.btn{
+  backface-visibility: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-size: 90%;
+  height: 44px;
+  margin: 12px 0 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0 10px;
+  width: 19vh;
+
+}
+.front {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .front-container {
+    padding-top: 100px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+  max-width: 100%;
+  width: "1000";
+   height: "300";
+  }
+
+  .welcome-text h2 {
+    padding-top: 30px;
+    text-align: center;
+    font-size:xx-large;
+
+  }
+
+  .welcome-text p {
+    color: #333;
+    padding-top: 10px;
+    text-align: center;
+    font-size: large;
+  }
+
+  .welcome-text button {
+    color: #fff;
+    background-color: #000;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.subheading {
+    padding-top: 100px
+}
+
+.subheading h2 {
+    padding-top: 30px;
+    font-size:xx-large;
+    text-align: center;
+  }
+
+  .subheading ul {
+    color: #000000;
+    padding-top: 10px;
+    font-size: large;
+  }
+
+
+
+
+  .destinations-images {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 30px;
+    max-width: 100%;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+
+
+  }
+
+  .destinations-images img {
+    width: 21.5vw;
+    height: 60vh;
+  }
+
+
+  .country {
+    position: relative;
+    text-align: center;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+
+  }
+
+  .country img {
+    filter: brightness(80%);
+  }
+
+  .country-text {
+    font-size: 39px;
+    font-family: 'Bebas Neue', sans-serif;
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: top 250ms;
+  }
+
+
+  .hover-country-text {
+    top: 50%;
+  }
+
+
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 5px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  .hover-experience-text {
+    top: 55%;
+  }
+
+  .contact {
+    padding-top: 120px;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .contact div{
+    padding-left: 50px;
+  }
+
+  .contact h2 {
+    font-size: 36px;
+    font-family: 'Bebas Neue', sans-serif;
+    text-align: center;
+  }
+
+  .contact p {
+    padding-top: 20px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+  
+  }
+
+
+  .back-to-top {
+    padding-top: 80px;
+    text-align: center;
+  }
+
+  .back-to-top button{
+    background-color: #000;
+    color: #fff;
+    width: 15%;
+  }
+
+
+  .footer-line {
+    margin-top: 50px;
+    border: 0;
+    border-top: 1px solid #c9c7c7;
+  }
+
+
+  .footer {
+    width: 100%;
+    padding: 50px 5%;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: 8fr 3fr 3fr;
+    align-items: start;
+
+  }
+
+
+.col-1 button {
+    border: 0;
+    background-color: #104C97;
+    color: #fff;
+    width: 162px;
+}
+
+
+
+  .col-2 a{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    padding-top: 12px;
+    color: #686868;
+
+  }
+
+  .col-3 a{
+    display: block;
+    text-decoration: none;
+    font-size: 14px;
+    padding-top: 12px;
+    color: #686868;
+  }
+
+  .footer div h3 {
+    font-weight: 300;
+    margin-bottom: 30px;
+
+  }
+
+  .social-icons {
+    margin-top: 30px;
+  }
+
+  .social-icons i{
+    font-size: 22px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1208px) {
+    .destinations-images img{
+      width: 404.59px;
+      height: 539.45px;
+    }
+
+    .experience-images img {
+      width: 404.59px;
+      height: 269.72;
+    }
+
+    .contact {
+      display: block;
+
+    }
+
+    .contact img{
+      width: 100%;
+      height: auto;
+
+    }
+  }
